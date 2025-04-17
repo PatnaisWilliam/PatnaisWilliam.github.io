@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Mobile Navigation Toggle
     const hamburger = document.querySelector(".hamburger")
     const navLinks = document.querySelector(".nav-links")
   
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
   
-    // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault()
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth",
           })
   
-          // Close mobile menu if open
           if (navLinks.classList.contains("active")) {
             navLinks.classList.remove("active")
           }
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   
-    // Animate Skill Bars on Scroll
     const skillBars = document.querySelectorAll(".skill-progress-bar")
   
     function animateSkillBars() {
@@ -41,13 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }
   
-    // Check if element is in viewport
     function isInViewport(element) {
       const rect = element.getBoundingClientRect()
       return rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0
     }
   
-    // Animate skill bars when they come into view
     function checkSkillBars() {
       const skillsSection = document.querySelector(".skills")
       if (skillsSection && isInViewport(skillsSection)) {
@@ -57,9 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     window.addEventListener("scroll", checkSkillBars)
-    checkSkillBars() // Check on initial load
+    checkSkillBars() 
   
-    // Form Submission
     const contactForm = document.getElementById("contact-form")
   
     if (contactForm) {
