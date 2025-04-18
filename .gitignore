@@ -1,0 +1,13 @@
+# Ignorer les fichiers vidéo communs
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.webm
+*.mpeg
+*.mpg
+
+# Optionnel : ignorer les vidéos dans un dossier spécifique
+/videos/
